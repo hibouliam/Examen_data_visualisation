@@ -1,3 +1,3 @@
 # Examen_data_visualisation
 Rendu de mon partiel de data visualisation
-![Texte alternatif](images/Graphique.jpg)
+!(images/Graphique.jpg)
