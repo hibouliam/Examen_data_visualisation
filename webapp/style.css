@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+img {
+    position: absolute;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Assure que l'icone est au-dessus des autres éléments */
+}
+
+.app-bar {
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.counter-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.counter-display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.digit {
+    width: 40px;
+    height: 80px;
+    background: #222;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 80px;
+    margin: 0 2px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1; /* Ensure digits are above the line */
+}
+
+.digit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(48, 7, 7);
+    transform: translateY(-50%);
+    z-index: 0; /* Ensure line is below the digits */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.counter-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.counter-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#increaseButton {
+    background: #28a745;
+}
+
+#decreaseButton {
+    background: #dc3545;
+}
+
+#resetButton {
+    background: #ffc107;
+}
